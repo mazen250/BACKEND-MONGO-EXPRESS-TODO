@@ -7,9 +7,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const url =
-    "mongodb+srv://Mazen:Mazen123@cluster0.sbnha.mongodb.net/Todo-List?retryWrites=true&w=majority";
-// const url = "mongodb://localhost:27017/Todo-List";
+// const url =
+//     "mongodb+srv://Mazen:Mazen123@cluster0.sbnha.mongodb.net/Todo-List?retryWrites=true&w=majority";
+// const url = "mongodb://"+process.env.IP+":27017/tools";
+const url = "mongodb://localhost:27017/tools";
+
 mongoose
     .connect(url, {
         useNewUrlParser: true,
@@ -69,5 +71,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(5000, (req, res) => {
-    console.log("app running on port 5001");
+    console.log("app running on port 5000");
 });
