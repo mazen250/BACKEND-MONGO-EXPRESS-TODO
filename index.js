@@ -10,7 +10,7 @@ app.use(express.json());
 // const url =
 //     "mongodb+srv://Mazen:Mazen123@cluster0.sbnha.mongodb.net/Todo-List?retryWrites=true&w=majority";
 //  const url = "mongodb://"+process.env.IP+":27017/tools";
-const url = "mongodb://tools:1122@172.30.86.37:27017/tools?directConnection=true&serverSelectionTimeoutMS=2000";
+const url = "mongodb://tools:1122@"+process.env.IP+":27017/tools?directConnection=true&serverSelectionTimeoutMS=2000";
 
 mongoose
     .connect(url, {
